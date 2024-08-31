@@ -9,7 +9,7 @@ class Group:
         self.group_id = group_id
         self.name = name
         self.members = members
-        self.expenses: List[Expense]
+        self.expenses: List[Expense] = []
     
     def add_expense(self, expense: Expense) -> None:
         self.expenses.append(expense)
