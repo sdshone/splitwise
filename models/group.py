@@ -10,11 +10,11 @@ class Group:
         self.name = name
         self.members = members
         self.expenses: List[Expense] = []
-    
+
     def add_expense(self, expense: Expense) -> None:
         self.expenses.append(expense)
         self.update_balances(expense)
-    
+
     def update_balances(self, expense: Expense) -> None:
         shares = expense.calculate_shares()
         for user, share in shares.items():
